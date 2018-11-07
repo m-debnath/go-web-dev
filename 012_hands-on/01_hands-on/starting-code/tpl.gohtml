@@ -9,6 +9,19 @@
 {{range .}}
 
 <!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
+<h1>In the academic year {{.AcaYear}}</h1>
+<h2>In {{.Fall.Term}} semester the following courses are offered.</h2>
+<ul>
+    {{range .Fall.Courses}}
+    <li>Name: {{.Name}}; Number: {{.Number}}; Units: {{.Units}}</li>
+    {{end}}
+</ul>
+<h2>In {{.Spring.Term}} semester the following courses are offered.</h2>
+<ul>
+    {{range .Spring.Courses}}
+    <li>Name: {{.Name}}; Number: {{.Number}}; Units: {{.Units}}</li>
+    {{end}}
+</ul>
 
 {{end}}
 
