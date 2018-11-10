@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Idlicious Menu</title>
+</head>
+<body>
+    <h1>Idlicious Menu</h1>
+    <h2>Breakfast Items</h2>
+    {{range .}}
+    {{if eq .TimeOfDay "Breakfast"}}
+    <h3>{{.Name}}: {{.Price}}</h3>
+    {{end}}
+    {{end}}
+    <h2>Lunch Items</h2>
+    {{range .}}
+    {{if eq .TimeOfDay "Lunch"}}
+    <h3>{{.Name}}: {{.Price}}</h3>
+    {{end}}
+    {{end}}
+    <h2>Dinner Items</h2>
+    {{range .}}
+    {{if eq .TimeOfDay "Dinner"}}
+    <h3>{{.Name}}: {{.Price}}</h3>
+    {{end}}
+    {{end}}
+</body>
+</html>

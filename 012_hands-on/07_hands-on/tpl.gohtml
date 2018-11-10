@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Menu</title>
+</head>
+<body>
+    {{range $key, $val := .}}
+    <h1>{{$key}} Menu</h1>
+    <h2>Breakfast Items</h2>
+    {{range $val}}
+    {{if eq .TimeOfDay "Breakfast"}}
+    <h3>{{.Name}}: {{.Price}}</h3>
+    {{end}}
+    {{end}}
+    <h2>Lunch Items</h2>
+    {{range $val}}
+    {{if eq .TimeOfDay "Lunch"}}
+    <h3>{{.Name}}: {{.Price}}</h3>
+    {{end}}
+    {{end}}
+    <h2>Dinner Items</h2>
+    {{range $val}}
+    {{if eq .TimeOfDay "Dinner"}}
+    <h3>{{.Name}}: {{.Price}}</h3>
+    {{end}}
+    {{end}}
+    <p>-------------------------------------------------------------------</p>
+    {{end}}
+</body>
+</html>
